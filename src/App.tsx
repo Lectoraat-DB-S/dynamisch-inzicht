@@ -3,6 +3,8 @@ import WorldMap from "./components/worldMap";
 import Themes from "./components/themes";
 import "../src/style/App.css";
 import Navbar from "./components/Navbar";
+import Collabs from "./components/Collabs";
+
 
 export default class App extends Component {
   public render = () => {
@@ -10,7 +12,6 @@ export default class App extends Component {
       <>
         <div className="col-4">
           <Navbar />
-          <Themes />
         </div>
         <div className="col-8">
           <WorldMap />
