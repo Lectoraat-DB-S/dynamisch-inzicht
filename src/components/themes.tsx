@@ -5,7 +5,8 @@ export default class Themes extends Component {
   public render = () => {
     return(
       <>
-      <table id="table-container">
+      <div>
+      <table className="table-container">
         <tr>
           <td>Thema 1</td>
           <td>Thema 2</td>
@@ -23,6 +24,7 @@ export default class Themes extends Component {
           <td>Thema 8</td>
         </tr>
       </table>
+      </div>
       </>
     )
   }

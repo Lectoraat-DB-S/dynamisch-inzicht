@@ -9,7 +9,7 @@ export default class WorldMap extends Component{
         const perron038: [number, number] = [52.50563888516816, 6.08692708711251]
         return(
             <>
-            <div>
+            <div className="col-10">
     <MapContainer center={[52.50563888516816, 6.08692708711251]} zoom={15}scrollWheelZoom={true}>
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
