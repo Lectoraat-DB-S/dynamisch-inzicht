@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import WorldMap from "./components/worldMap";
 import Themes from "./components/themes";
-import "../src/style/App.css"
+import "../src/style/App.css";
 
 export default class App extends Component {
   public render = () => {
