@@ -4,7 +4,7 @@ export default class Collabs extends Component{
     public render = () =>{
         return(
             <>
-            <h2>These are alle the collabs yo</h2>
+            <h2>Samenwerkingsverbanden</h2>
             <ul>
                 <li>Perron038</li>
                 <li>Perron039</li>
