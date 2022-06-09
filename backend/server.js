@@ -1,11 +1,22 @@
-const http = require('node:http');
+require("dotenv").config();
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const express = require('express')
+const app = express()
 
-const server = http.createServer((req, res) => {
+//Middleware
+app.use(express.json());
+
+app.use("/post", require("./routes/postRoutes"));
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    console.log(err.name);
+    console.log(err.code);
+
+    res.status(500).json({
+        message: "Something no good",
+    });
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log('Is your server running on PORT ${PORT}'));
