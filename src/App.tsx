@@ -19,14 +19,14 @@ export default class App extends Component {
                   <Themes />
                 </Route>
                 <Route exact path="/samenwerkingsverbanden">
-                  <Collabs />
+                  <Collabs selectedCollab={""}/>
                 </Route>
               </Switch>
             </div>
           </div>
         </Router>
         <div className="col-8">
-          <WorldMap />
+          <WorldMap selected={""}/>
         </div>
       </>
     );
