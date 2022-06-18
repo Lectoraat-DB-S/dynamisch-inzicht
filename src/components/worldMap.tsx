@@ -1,29 +1,35 @@
 import React, { Component } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "../style/WorldMap.css";
+import Markers from "./Markers";
 
-export default class WorldMap extends Component {
+interface Props {
+  selected: any;
+}
+
+export default class WorldMap extends Component<Props> {
+  constructor(props: Props) {
+    super(props);
+  }
+
   public render = () => {
-    const perron038: [number, number] = [52.50563888516816, 6.08692708711251];
+    const selected = this.props;
+    console.log(selected);
+
     return (
       <>
-        <MapContainer
-          center={[52.50563888516816, 6.08692708711251]}
-          zoom={15}
-          scrollWheelZoom={true}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={perron038}>
-            <Popup>
-              <b>Perron038</b>
-              <br />
-              Maak de toekomst
-            </Popup>
-          </Marker>
-        </MapContainer>
+        <div className="App">
+          <MapContainer
+            center={[52.50563888516816, 6.08692708711251]}
+            zoom={10}
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Markers />
+          </MapContainer>
+        </div>
       </>
     );
   };

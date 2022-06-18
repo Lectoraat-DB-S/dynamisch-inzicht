@@ -7,7 +7,7 @@ export default class NavbarRef extends Component{
     return (
         <>
         <nav className="navbar">
-            <Link to="/"><h1>Home</h1></Link>
+            <Link to="/"><h1>(Logo)</h1></Link>
             <div>
                 <Link to="/">Thema's</Link>
                 <Link to="/samenwerkingsverbanden">Samenwerkingsverbanden</Link>
